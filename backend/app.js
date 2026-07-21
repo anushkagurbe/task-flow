@@ -14,6 +14,11 @@ app.use(cors({
     ],
     credentials: true
 }));
+
+console.log("Allowed Origins:", [
+  "http://localhost:5173",
+  "https://task-flow-frontend-3rsh.onrender.com"
+]);
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
