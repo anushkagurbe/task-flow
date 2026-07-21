@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res)=>{
-    return res.status(200).json({ success: true, message: "Welcome to notes api" });
+    return res.status(200).json({ success: true, message: "Welcome to notes api", origin: "https://task-flow-frontend-3rsh.onrender.com" });
 })
 
 app.use("/api/v1/auth", authRoutes);
