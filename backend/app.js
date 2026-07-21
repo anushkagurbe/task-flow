@@ -8,7 +8,10 @@ import noteRoutes from "./routes/note.routes.js";
 let app = express();
 
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: [
+        "http://localhost:5173",
+        "https://task-flow-frontend-3rsh.onrender.com"
+    ],
     credentials: true
 }));
 app.use(cookieParser());
